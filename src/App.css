@@ -1,0 +1,310 @@
+@import "../src/components/reset.css";
+
+
+.App-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1049px;
+  margin: 0 auto;
+  @media screen and (max-width: 768px) {
+    max-width: 693px;
+  }
+  @media screen and (max-width: 430px) {
+    max-width: 400px;
+  }
+}
+
+.App-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+}
+.App-header img {
+  @media screen and (max-width: 768px) {
+    margin: 0 auto;
+    width: 57px;
+  }
+  @media screen and (max-width: 430px) {
+    width: 68px;
+  }
+}
+.App-header p {
+  font-weight: 700;
+  font-size: 24px;
+  color: #4E148C;
+  margin-left: 34px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.App-main {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  margin-top: 21px;
+  gap: 50px;
+  @media screen and (max-width: 768px) {
+    gap: 0;
+  }
+}
+
+.App-main_aside {
+  display: flex;
+  flex-direction: column;
+  height: 503px;
+  justify-content: space-between;
+}
+
+.App-transfer {
+  background-color: #E8EBF2;
+  border-radius: 10px;
+  width: 272px;
+  height: 258px;
+  padding: 18px;
+  box-sizing: border-box;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.trans_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.aside-p {
+  font-weight: 700;
+  font-size: 20px;
+  color: #4E148C;
+  @media screen and (max-width: 768px) {
+    color:#F7F9F7;
+  }
+}
+
+.aside-label {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  gap: 21px;
+  margin: 27px 27px;
+  color: #858AE3;
+  @media screen and (max-width: 768px) {
+    color:#F7F9F7;
+    margin: 13px 0 0 0;
+  }
+}
+
+input[type="checkbox"] {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+.trans-checkbox {
+  display: inline-block; 
+  height: 21px;
+  width: 21px;
+  margin-right: 22px;
+}
+
+.company-checkbox {
+  display: inline-block; 
+  height: 21px;
+  width: 21px;
+  margin-right: 22px;
+}
+
+.trans-checkbox--active {
+  border-color: #4E148C;
+  background: #4E148C;
+}
+
+.trans_label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.App-company {
+  background-color: #E8EBF2;
+  border-radius: 10px;
+  width: 272px;
+  height: 198px;
+  padding: 18px;
+  box-sizing: border-box;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.mainMenu {
+  display: flex;
+  flex-direction: row;
+  width: 727px;
+  height: 55px;
+  margin-bottom: 29px;
+  @media screen and (max-width: 768px) {
+    width: 693px;
+  }
+  @media screen and (max-width: 430px) {
+    max-width: 400px;
+  }
+}
+
+.mainMenu-box {
+  display: flex;
+  border: #4E148C 1px solid;
+  place-items: center;
+  place-content: center;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #4E148C;
+  background-color: #E8EBF2;
+  @media screen and (max-width: 430px) {
+    font-size: 12px;
+  }
+}
+
+.mainMenu-cheap {
+  border-radius: 10px 0 0 10px;
+}
+.Main-menu-On {
+  color: #E8EBF2;
+  background-color: #4E148C;
+}
+
+.mainMenu-optimal {
+  border-radius: 0 10px 10px 0;
+}
+
+.main-button {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #4E148C;
+  background-color: #E8EBF2;
+  border: #4E148C 1px solid;
+  cursor: pointer;
+  width: 100%;
+  height: 62px;
+  border-radius: 10px;
+}
+
+.main-button:hover {
+  color: #E8EBF2;
+  background-color: #4E148C;
+}
+.main-button:active {
+  transform: translate(2px, 4px);
+}
+
+.ticket-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: #E8EBF2;
+  border-radius: 10px;
+  width: 100%;
+  height: 174px;
+  padding: 39px;
+  margin-bottom: 47px;
+  @media screen and (max-width: 768px) {
+    padding: 39px 23px;
+  }
+}
+.ticket-card-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.ticked-card-price {
+  font-size: 32px;
+  font-weight: 700;
+  color:#4E148C;
+  margin-bottom: 25px;
+  height: 51px;
+}
+.ticked-card-ligtText {
+  font-size: 16px;
+  font-weight: 500;
+  color:#858AE3;
+  margin-bottom: 9px;
+}
+.ticked-card-darkText {
+  font-size: 16px;
+  font-weight: 500;
+  color:#4E148C;
+}
+.ticked-card-logo {
+  object-fit: contain;
+  width: 180px;
+  height: 48px;
+  margin-bottom: 25px;
+  @media screen and (max-width: 768px) {
+    width: 160px;
+  }
+  @media screen and (max-width: 430px) {
+    width: 118px;
+  }
+}
+
+.mm-cover {
+  display: flex;
+  flex-direction: column;
+  color: #F7F9F7;
+  background-color: #4E148C;
+  border-radius: 10px;
+  padding: 10px 24px;
+  margin-bottom: 38px;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mm-header {
+  display: flex;
+  flex-direction: row;
+  height: 44px;
+  align-items: center;
+  justify-content: space-between;
+}
+.mm-header-open {
+  display: flex;
+  flex-direction: row;
+  width: 156px;
+  align-items: center;
+  font-size: 12px;
+  gap: 17px;
+  cursor: pointer;
+  @media screen and (max-width: 430px) {
+    width: 20px;
+  }
+}
+.mm-header-title {
+  @media screen and (max-width: 430px) {
+    display: none;
+  }
+}
+.mm-header img {
+  width: 20px;
+  height: 13px;
+}
+.mm-aside-open {
+  display: flex;
+  flex-direction: row;
+  width: 423px;
+  margin: 20px 0;
+  justify-content: space-between;
+}
