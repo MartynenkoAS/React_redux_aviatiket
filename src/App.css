@@ -271,6 +271,9 @@ input[type="checkbox"] {
   @media screen and (min-width: 768px) {
     display: none;
   }
+  @media screen and (max-width: 430px) {
+    padding: 7px 17px;
+  }
 }
 
 .mm-header {
@@ -279,6 +282,10 @@ input[type="checkbox"] {
   height: 44px;
   align-items: center;
   justify-content: space-between;
+  @media screen and (max-width: 430px) {
+    font-size: 12px;
+    height: 38px;
+  }
 }
 .mm-header-open {
   display: flex;
@@ -304,7 +311,10 @@ input[type="checkbox"] {
 .mm-aside-open {
   display: flex;
   flex-direction: row;
-  width: 423px;
+  max-width: 434px;
   margin: 20px 0;
   justify-content: space-between;
+  @media screen and (max-width: 430px) {
+    max-width: 400px;
+  }
 }

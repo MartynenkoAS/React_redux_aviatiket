@@ -1,7 +1,7 @@
 import MainPage from './components/MainPage';
 import Transfer from './components/Transfer';
 import Company  from './components/Company';
-import planeImg from './img/plane.png';
+import planeImg from '../src/img/plane.png';
 // import mainTicketsData from '../src/components/mockTiketData';
 import './App.css';
 

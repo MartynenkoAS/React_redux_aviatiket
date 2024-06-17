@@ -1,15 +1,16 @@
 import { configureStore }       from "@reduxjs/toolkit";
-import toggleSlice              from "./slices/firstSlice";
+import transferChoiceSlice      from "./slices/transferChoiceSlice";
+import companyChoiceSlice       from "./slices/companyChoiceSlice";
+import mainMenuSlice            from "./slices/mainMenuSlice";
 import { loadState, saveState } from "./lockalStorage";
 
 const preloadedState = loadState()
 
 const store = configureStore({
     reducer: {
-        withoutTrans: toggleSlice,
-        oneTrans:     toggleSlice,
-        twoTrans:     toggleSlice,
-        threeTrans:   toggleSlice,
+        transferChoice : transferChoiceSlice.reducer,
+        companyChoice  : companyChoiceSlice.reducer,
+        mainMenuChoice : mainMenuSlice.reducer,
     },
     preloadedState,
     })
@@ -17,5 +18,7 @@ const store = configureStore({
 store.subscribe(() => {
     saveState(store.getState());
 })
+
+export type RootStore = ReturnType <typeof store.getState>
 
 export default store
