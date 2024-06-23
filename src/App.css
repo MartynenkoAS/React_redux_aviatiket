@@ -53,8 +53,8 @@
 .App-main_aside {
   display: flex;
   flex-direction: column;
-  height: 503px;
-  justify-content: space-between;
+  height: auto;
+  gap: 47px;
 }
 
 .App-transfer {
@@ -137,7 +137,7 @@ input[type="checkbox"] {
   background-color: #E8EBF2;
   border-radius: 10px;
   width: 272px;
-  height: 198px;
+  height: auto;
   padding: 18px;
   box-sizing: border-box;
   @media screen and (max-width: 768px) {

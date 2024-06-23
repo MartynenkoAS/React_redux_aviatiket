@@ -1,8 +1,4 @@
 
-
-
-
-
 export interface TicketTime {
     startTime: string;
     endTime: string;
@@ -69,6 +65,30 @@ const mainTicketsData: Ticket[] = [
         duration: 343,
         date: "",
         connectionAmount: 2
+    },
+    {
+        id: 5,
+        from: "MSK",
+        to:   "SPB",
+        company: "Pobeda",
+        price: 25700,
+        currency: 'RUB',
+        time: {startTime: "12:00", endTime: "16:30"},
+        duration: 356,
+        date: "",
+        connectionAmount: 1
+    },
+    {
+        id: 6,
+        from: "MSK",
+        to:   "SPB",
+        company: "Aeroflot",
+        price: 12680,
+        currency: 'RUB',
+        time: {startTime: "12:00", endTime: "16:30"},
+        duration: 487,
+        date: "",
+        connectionAmount: 1
     },
 ]
 

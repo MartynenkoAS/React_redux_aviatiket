@@ -1,14 +1,15 @@
-// import { useDispatch, useSelector } from 'react-redux';
-// import {firstReducer, secondReducer} from "./store/slices/firstSlice.js";
+import { useDispatch, useSelector } from 'react-redux';
 import MainMenu from './MainMenu.tsx';
 import MobileMenu from './MobileMenu.tsx';
 import TiketCard from './TiketCard.tsx';
-import mainTicketsData from './mockTiketData.tsx';
+import { RootStore } from '../store/store.tsx';
+// import mainTicketsData from './mockTiketData.tsx';
 
 const MainPage = () => {
     
-    // const dispatch = useDispatch();
-    // const anyPeremennaya = useSelector(state => state.s111);
+    // const dispatch: Dispatch = useDispatch();
+
+    const filterData = useSelector((state: RootStore) => state.ticketData.filterData);
 
     const handlerButton = () => {
         console.log("загружаем билеты...")
@@ -18,7 +19,7 @@ const MainPage = () => {
         <div >
             < MainMenu />
             < MobileMenu />
-            < TiketCard ticketsSort = {mainTicketsData}/>
+            < TiketCard ticketsSort = {filterData}/>
             <button className='main-button' onClick={handlerButton}>Загрузить еще билеты</button>
         </div>
     )

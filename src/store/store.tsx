@@ -1,6 +1,7 @@
 import { configureStore }       from "@reduxjs/toolkit";
 import transferChoiceSlice      from "./slices/transferChoiceSlice";
 import companyChoiceSlice       from "./slices/companyChoiceSlice";
+import ticketSlice              from "./slices/ticketSlice";
 import mainMenuSlice            from "./slices/mainMenuSlice";
 import { loadState, saveState } from "./lockalStorage";
 
@@ -11,6 +12,7 @@ const store = configureStore({
         transferChoice : transferChoiceSlice.reducer,
         companyChoice  : companyChoiceSlice.reducer,
         mainMenuChoice : mainMenuSlice.reducer,
+        ticketData     : ticketSlice.reducer,
     },
     preloadedState,
     })

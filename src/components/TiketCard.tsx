@@ -1,19 +1,27 @@
-import React from "react";
 import Pobeda from '../img/Pobeda.png'
 import RedWings from '../img/RedWings.png'
 import Sseven from '../img/S7.png'
+import Aeroflot from '../img/Aeroflot.png'
+// import Tiket from '../components/mockTiketData'
 
 
 const TiketCard = ( props ) => {
     
-    // const dispatch = useDispatch();
-    // const anyPeremennaya = useSelector(state => state.s111);
     const {ticketsSort} = props;
 
-    const companyLogo = {
-        Pobeda: Pobeda,
-        RedWings: RedWings,
-        Sseven: Sseven
+    const companyLogo = (name: string) => {
+        switch (name) {
+            case "Pobeda":
+                return Pobeda;
+            case "RedWings":
+                return RedWings;
+            case "Sseven":
+                return Sseven;
+            case "Aeroflot":
+                return Aeroflot;
+            default:
+                return name;
+        }
     }
     
     return (
@@ -30,7 +38,7 @@ const TiketCard = ( props ) => {
                     <div className="ticked-card-darkText">{`${Math.floor(elem.duration / 60)} ч ${elem.duration % 60} мин`}</div>
                 </div>
                 <div className="ticked-card-box">
-                    <img className="ticked-card-logo" src={eval(elem.company)} alt="../img" />
+                    <img className="ticked-card-logo" src={companyLogo(elem.company)} alt="../img" />
                     <div className="ticked-card-ligtText">Пересадки</div>
                     <div className="ticked-card-darkText">{elem.connectionAmount === 0 ? "Без пересадок" : `${elem.connectionAmount} 
                                                     пересадк${elem.connectionAmount > 1 ? "и" : "а"}`}</div>

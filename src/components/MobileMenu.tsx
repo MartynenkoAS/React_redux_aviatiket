@@ -1,9 +1,8 @@
-import React, { useState }   from "react";
-import Company from "./Company";
-import Transfer from "./Transfer";
-import arrUp   from '../img/arrow_up.png';
-import arrDown from '../img/arrow_down.png';
-// import mainTicketsData from "./mockTiketData";
+import { useState } from 'react';
+import Company      from './Company';
+import Transfer     from './Transfer';
+import arrUp        from '../img/arrow_up.png';
+import arrDown      from '../img/arrow_down.png';
 
 
 const MobileMenu = () => {

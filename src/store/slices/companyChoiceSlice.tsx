@@ -1,16 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+type initialStateType = {[key: string]: boolean};
+
+const initialState: initialStateType = {};
 
 const companyChoiceSlice = createSlice({
     name: "companyChoice",
-    initialState: {companyToggle: true},
+    initialState,
     reducers: {
-        reducerForCompany: (state, action) => {state.companyToggle = !state.companyToggle; console.log(action)},
+        reducerInitCompany:   (state, action) => {state[action.payload] = false},
+        reducerToggleCompany: (state, action) => {state[action.payload] = !state[action.payload]},
     },
-    
 })
 
 
-export const {reducerForCompany} = companyChoiceSlice.actions;
+export const {reducerToggleCompany, reducerInitCompany} = companyChoiceSlice.actions;
 
 export default companyChoiceSlice;
