@@ -1,11 +1,14 @@
-import Pobeda from '../img/Pobeda.png'
-import RedWings from '../img/RedWings.png'
-import Sseven from '../img/S7.png'
-import Aeroflot from '../img/Aeroflot.png'
-// import Tiket from '../components/mockTiketData'
+import Pobeda   from '../img/Pobeda.png';
+import RedWings from '../img/RedWings.png';
+import Sseven   from '../img/S7.png';
+import Aeroflot from '../img/Aeroflot.png';
+import NoFoto   from '../img/NoFoto.png';
+import { Ticket } from './mockTiketData';
 
 
-const TiketCard = ( props ) => {
+type PropsType = {ticketsSort:Ticket[]}
+
+const TiketCard = ( props: PropsType ) => {
     
     const {ticketsSort} = props;
 
@@ -20,13 +23,13 @@ const TiketCard = ( props ) => {
             case "Aeroflot":
                 return Aeroflot;
             default:
-                return name;
+                return NoFoto;
         }
     }
     
     return (
         <>
-            {ticketsSort.map((elem) => { return <div key={elem.id} className="ticket-card"> 
+            {ticketsSort.map((elem: Ticket) => { return <div key={elem.id} className="ticket-card"> 
                 <div className="ticked-card-box">
                     <div className="ticked-card-price">{`${Intl.NumberFormat("ru").format(elem.price)} P`}</div>
                     <div className="ticked-card-ligtText">{`${elem.from} - ${elem.to}`}</div>
@@ -41,7 +44,7 @@ const TiketCard = ( props ) => {
                     <img className="ticked-card-logo" src={companyLogo(elem.company)} alt="../img" />
                     <div className="ticked-card-ligtText">Пересадки</div>
                     <div className="ticked-card-darkText">{elem.connectionAmount === 0 ? "Без пересадок" : `${elem.connectionAmount} 
-                                                    пересадк${elem.connectionAmount > 1 ? "и" : "а"}`}</div>
+                                                    пересадк${elem.connectionAmount != null && elem.connectionAmount > 1 ? "и" : "а"}`}</div>
                 </div>
             </div>
             })}

@@ -8,7 +8,7 @@ const companyChoiceSlice = createSlice({
     name: "companyChoice",
     initialState,
     reducers: {
-        reducerInitCompany:   (state, action) => {state[action.payload] = false},
+        reducerInitCompany:   (state, action) => {state[action.payload] = true},
         reducerToggleCompany: (state, action) => {state[action.payload] = !state[action.payload]},
     },
 })

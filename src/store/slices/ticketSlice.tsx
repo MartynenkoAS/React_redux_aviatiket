@@ -2,24 +2,16 @@ import { createSlice } from "@reduxjs/toolkit";
 import { Ticket }      from '../../components/mockTiketData.ts';
 import mainTicketsData from '../../components/mockTiketData.ts';
 
-// type initialStateType = {data: Ticket[], filerData: Ticket[]};
-
-const initialState: {data: Ticket[], filterData: Ticket[]} = {data: mainTicketsData, filterData: mainTicketsData};
+const initialState: {data: Ticket[]} = {data: []};
 
 const tiketSlice = createSlice({
     name: "ticketData",
     initialState,
     reducers: {
-        filterTickets: (state) => {
-            
-            
-        }
+        loadTickets: (state) => { state.data = mainTicketsData }            // тут загружаем билеты из mockTiketData.ts
     },
 })
 
-
-// export const {} = TiketSlice.actions;
-
-export const {filterTickets} = tiketSlice.actions;
+export const {loadTickets} = tiketSlice.actions;
 
 export default tiketSlice;

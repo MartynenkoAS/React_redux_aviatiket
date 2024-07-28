@@ -90,6 +90,30 @@ const mainTicketsData: Ticket[] = [
         date: "",
         connectionAmount: 1
     },
+    {
+        id: 7,
+        from: "MSK",
+        to:   "SPB",
+        company: "ХЗ че за самолет",
+        price: 10200,
+        currency: 'RUB',
+        time: {startTime: "12:00", endTime: "16:30"},
+        duration: 698,
+        date: "",
+        connectionAmount: 0
+    },
+    {
+        id: 8,
+        from: "MSK",
+        to:   "SPB",
+        company: "Aeroflot",
+        price: 35200,
+        currency: 'RUB',
+        time: {startTime: "12:00", endTime: "16:30"},
+        duration: 1254,
+        date: "",
+        connectionAmount: 3
+    },
 ]
 
 export default mainTicketsData

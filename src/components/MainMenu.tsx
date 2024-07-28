@@ -7,8 +7,8 @@ const MainMenu = () => {
 
     const dispatch: Dispatch = useDispatch();
 
-    const isCheap: boolean   = useSelector((state : RootStore) => state.mainMenuChoice.setIsCheap);
-    const isFast: boolean    = useSelector((state : RootStore) => state.mainMenuChoice.setIsFast);
+    const isCheap:   boolean = useSelector((state : RootStore) => state.mainMenuChoice.setIsCheap);
+    const isFast:    boolean = useSelector((state : RootStore) => state.mainMenuChoice.setIsFast);
     const isOptimal: boolean = useSelector((state : RootStore) => state.mainMenuChoice.setIsOptimal);
 
     return (

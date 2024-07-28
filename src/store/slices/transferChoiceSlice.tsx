@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 
+
 const transferChoiceSlice = createSlice({
     name: "transferChoice",
-    initialState: {withoutTrans: true, oneTrans: false, twoTrans: false, threeTrans: false },
+    initialState: {withoutTrans: true, oneTrans: true, twoTrans: true, threeTrans: true },
     reducers: {
         withoutTransToggle: (state) => {state.withoutTrans = !state.withoutTrans},
         oneTransToggle:     (state) => {state.oneTrans     = !state.oneTrans},

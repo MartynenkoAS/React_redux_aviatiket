@@ -1,9 +1,9 @@
+import { withoutTransToggle, oneTransToggle, twoTransToggle, threeTransToggle } from '../store/slices/transferChoiceSlice';
+import { useDispatch, useSelector } from 'react-redux';
 import check_dark    from "../img/check_purpure_border.png";
 import check_light   from '../img/check_white_border.png'
 import uncheck_dark  from "../img/uncheck_purpure_border.png";
 import uncheck_light from '../img/uncheck_white_border.png';
-import { useDispatch, useSelector } from 'react-redux';
-import { withoutTransToggle, oneTransToggle, twoTransToggle, threeTransToggle } from '../store/slices/transferChoiceSlice';
 import { Dispatch }  from '@reduxjs/toolkit';
 import { RootStore } from "../store/store";
 
